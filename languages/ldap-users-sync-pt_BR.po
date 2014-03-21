@@ -1,0 +1,293 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: LDAP Users Sync\n"
+"POT-Creation-Date: 2014-03-21 16:00-0300\n"
+"PO-Revision-Date: 2014-03-21 16:02-0300\n"
+"Last-Translator: Ricardo Zanini <ricardozanini@gmail.com>\n"
+"Language-Team:  <ricardozanini@gmail.com>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ./public\n"
+"X-Poedit-SearchPath-2: ./includes\n"
+"X-Poedit-SearchPath-3: ./admin\n"
+"X-Poedit-SearchPath-4: ./admin/views\n"
+"X-Poedit-SearchPath-5: ./admin/includes\n"
+"X-Poedit-SearchPath-6: ./public/includes\n"
+
+#: admin/class-ldap-users-sync-admin.php:46
+msgid "LDAP Sync Options"
+msgstr "LDAP Sync Opções"
+
+#: admin/includes/class-lus-log-list-table.php:52
+msgid "Date"
+msgstr "Data"
+
+#: admin/includes/class-lus-log-list-table.php:53
+msgid "Status"
+msgstr "Posição"
+
+#: admin/includes/class-lus-log-list-table.php:54
+msgid "Time Taken"
+msgstr "Tempo de Demora"
+
+#: admin/includes/class-lus-log-list-table.php:55
+msgid "Updated"
+msgstr "Atualizados"
+
+#: admin/includes/class-lus-log-list-table.php:56
+msgid "Inactivated"
+msgstr "Inativados"
+
+#: admin/includes/class-lus-log-list-table.php:57
+msgid "Full Sync"
+msgstr "Sincronização Completa"
+
+#: admin/includes/class-lus-log-list-table.php:68
+msgid "No one"
+msgstr "Ninguém"
+
+#: admin/includes/class-lus-log-list-table.php:78
+msgid "More"
+msgstr "Mais"
+
+#: admin/includes/class-lus-log-list-table.php:114
+msgid "View"
+msgstr "Visualizar"
+
+#: admin/includes/class-lus-log-list-table.php:120 admin/views/admin.php:64
+#: admin/views/admin.php:150 admin/views/admin.php:168
+msgid "Yes"
+msgstr "Sim"
+
+#: admin/includes/class-lus-log-list-table.php:122 admin/views/admin.php:65
+#: admin/views/admin.php:151 admin/views/admin.php:169
+msgid "No"
+msgstr "Não"
+
+#: admin/includes/class-lus-log-list-table.php:127
+msgid "seconds"
+msgstr "segundos"
+
+#: admin/includes/class-lus-log-list-table.php:133
+#: admin/includes/class-lus-log-list-table.php:166
+msgid "Delete"
+msgstr "Excluir"
+
+#: admin/includes/class-lus-log-list-table.php:155
+msgid "No logs."
+msgstr "Não há logs."
+
+#: admin/includes/class-lus-log-list-table.php:312
+msgid "No data available."
+msgstr "Não há registros."
+
+#: admin/includes/class-lus-options.php:97
+msgid "<b>Synchronization Process:</b> Started Successfully!"
+msgstr "<b>Processo de Sincronização:</b> Iniciado com Sucesso!"
+
+#: admin/includes/class-lus-options.php:103
+msgid "<b>LDAP Connection Test:</b> Successful!"
+msgstr "<b>Teste de Conexão com LDAP:</b> Sucesso!"
+
+#: admin/includes/class-lus-options.php:105
+msgid "<b>LDAP Connection Test:</b> Failed!"
+msgstr "<b>Teste de Conexão com LDAP:</b> Falhou!"
+
+#: admin/includes/class-lus-options.php:109
+msgid "Saved Options!"
+msgstr "Opções Salvas!"
+
+#: admin/includes/class-lus-options.php:131
+msgid "Log(s) deleted!"
+msgstr "Log(s) excluído(s)!"
+
+#: admin/includes/class-lus-options.php:140
+msgid "<b>Log deletion:</b> Failed!"
+msgstr "<b>Exclusão de Log:</b> Falhou!"
+
+#: admin/views/admin.php:12
+msgid "Server Address:"
+msgstr "Endereço do Servidor:"
+
+#: admin/views/admin.php:16
+msgid ""
+"The name or IP address of the LDAP server.  The protocol should be left out. "
+"(Ex. ldap.example.com). If you have more than one server, use commas. (Ex. "
+"ldap1.example.com, ldap2.example.com)"
+msgstr ""
+"O nome ou endereço IP do servidor LDAP. O protocolo deve ser deixado de "
+"fora. (Ex. ldap.exemplo.com). Se você possui mais de um servidor, separe-os "
+"por vírgula. (Ex. ldap1.exemplo.com, ldap2.exemplo.com)"
+
+#: admin/views/admin.php:20
+msgid "Server Port:"
+msgstr "Porta do Servidor:"
+
+#: admin/views/admin.php:24
+msgid ""
+"Port Number of the LDAP server. (LDAP: Linux=389, Windows=3268) (LDAPS: "
+"Linux=636, Windows=3269). Use commas for more than one server. Same as above."
+msgstr ""
+"O número da porta do servidor LDAP. (LDAP: Linux=389, Windows=3268) (LDAPS: "
+"Linux=636, Windows=3269). Utilize vírgulas para mais de um servidor. O mesmo "
+"que acima."
+
+#: admin/views/admin.php:28
+msgid "Search DN:"
+msgstr "Pesquisa DN:"
+
+#: admin/views/admin.php:32
+msgid ""
+"The base DN in which to carry out LDAP searches. (Ex. DC=example,DC=com)"
+msgstr "O DN base no qual o LDAP fará a pesquisa. (Ex. DC=example,DC=com)"
+
+#: admin/views/admin.php:37
+msgid "Account Sufix:"
+msgstr "Sufixo da Conta:"
+
+#: admin/views/admin.php:41
+msgid "The user account sufix. (Ex. @example.com)"
+msgstr "O sufixo da conta de usuário. (Ex. @exemplo.com)"
+
+#: admin/views/admin.php:46
+msgid "Search User DN:"
+msgstr "Usuário de Pesquisa DN:"
+
+#: admin/views/admin.php:50
+msgid ""
+"Some systems do not allow anonymous searching for attributes, and so this "
+"will set the account to use when connecting for searches."
+msgstr ""
+"Alguns sistemas não permitem pesquisa anônima para atributos, essa opção "
+"define a conta para ser utilizada durante as pesquisas."
+
+#: admin/views/admin.php:54
+msgid "Search User Password:"
+msgstr "Senha do Usuário de Pesquisa:"
+
+#: admin/views/admin.php:58
+msgid "Password for the User DN above."
+msgstr "A senha para o Usuário DN acima."
+
+#: admin/views/admin.php:62
+msgid "Test Connection:"
+msgstr "Testar Conexão:"
+
+#: admin/views/admin.php:67
+msgid ""
+"Specify whether or not to test the ldap server connection on form submit."
+msgstr ""
+"Define se é para realizar um teste de conexão no servidor ldap durante o "
+"envio do formulário."
+
+#: admin/views/admin.php:71 admin/views/admin.php:102
+#: admin/views/admin.php:175
+msgid "Save Options"
+msgstr "Salvar Opções"
+
+#: admin/views/admin.php:85
+msgid "Attributes:"
+msgstr "Atributos:"
+
+#: admin/views/admin.php:89
+msgid ""
+"Inform all LDAP attributes you wish to synchronize within the network users "
+"profiles. Separate the user profile field from the LDAP attribute using an "
+"equal sign, one pair per line. (Ex. Phone=telephoneNumber)"
+msgstr ""
+"Informe todos os atributos LDAP que você deseja sincronizar com as contas de "
+"usuário da rede. Separe o campo do perfil do usuário do campo do atributo do "
+"LDAP utilizando um sinal de igual, um par por linha. (Ex. "
+"Telefone=telephoneNumber)"
+
+#: admin/views/admin.php:93
+msgid "Capitalize Names:"
+msgstr "Ajustar Nomes:"
+
+#: admin/views/admin.php:98
+msgid ""
+"Names should be capitalized when imported? (Ex. \"JOHN DOE\" or \"john doe\" "
+"will be replaced by \"John Doe\")"
+msgstr ""
+"Nomes deverão ser ajustados durante a importação?  (Ex. \"JOÃO SILVA\" ou "
+"\"joão silva\" será substituído por \"João Silva\")"
+
+#: admin/views/admin.php:117
+msgid "Job schedule:"
+msgstr "Agenda da Tarefa:"
+
+#: admin/views/admin.php:130
+msgid ""
+"The synchronization schedule. Use the built in calendar to choose the date "
+"and time."
+msgstr ""
+"A agenda de sincronização. Utilize o calendário para escolher a data e hora."
+
+#: admin/views/admin.php:134
+msgid "Next Run on:"
+msgstr "Próxima Execução em:"
+
+#: admin/views/admin.php:142
+msgid "No jobs scheduled."
+msgstr "Não há tarefas agendadas."
+
+#: admin/views/admin.php:148
+msgid "Perform a full Sync:"
+msgstr "Realizar sicronização completa:"
+
+#: admin/views/admin.php:153
+msgid ""
+"Specify whether or not to perform a full synchronization on next run. The "
+"default behavior, the job will perform a full sync only on the very first "
+"time. On next run only LDAP users that have some info changed will be "
+"updated."
+msgstr ""
+"Define se deverá ser executada uma sincronização completa na próxima "
+"execução. Por padrão, a tarefa deverá realizar uma sincronização completa "
+"apenas em sua primeira execução. Nas próximas execuções apenas usuários LDAP "
+"que possuem alguma alteração de dados serão atualizados."
+
+#: admin/views/admin.php:157
+msgid "Disable Sync:"
+msgstr "Desabilitar Sincronização:"
+
+#: admin/views/admin.php:162
+msgid "Check if you want to disable the synchronization process."
+msgstr "Marque se você desejar desabilitar o processo de sincronização."
+
+#: admin/views/admin.php:166
+msgid "Run Now:"
+msgstr "Executar Agora:"
+
+#: admin/views/admin.php:171
+msgid ""
+"Specify whether or not to run the synchronization process on form submit."
+msgstr ""
+"Define se o processo de sincronização deverá ser executado durante o envio "
+"do formulário."
+
+#: admin/views/admin.php:222
+msgid "Connection Settings"
+msgstr "Configurações de Conexão"
+
+#: admin/views/admin.php:223
+msgid "Attribute Mapping"
+msgstr "Mapeamento de Atributos"
+
+#: admin/views/admin.php:224
+msgid "Synchronization Job"
+msgstr "Tarefa de Sincronização"
+
+#: admin/views/admin.php:225
+msgid "Logs"
+msgstr "Logs"
+
+#: admin/views/admin.php:228
+msgid "Ldap Synchronization Options"
+msgstr "Opções de Sincronização LDAP"

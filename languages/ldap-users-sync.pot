@@ -1,0 +1,265 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: LDAP Users Sync\n"
+"POT-Creation-Date: 2014-03-19 12:44-0300\n"
+"PO-Revision-Date: 2014-03-19 12:44-0300\n"
+"Last-Translator: Ricardo Zanini <ricardozanini@gmail.com>\n"
+"Language-Team:  <ricardozanini@gmail.com>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: ./lib\n"
+"X-Poedit-SearchPath-1: ./lib/classes\n"
+
+#: lib/lus_admin.functions.php:19
+msgid "Connection Settings"
+msgstr ""
+
+#: lib/lus_admin.functions.php:20
+msgid "Atribute Mapping"
+msgstr ""
+
+#: lib/lus_admin.functions.php:21
+msgid "Syncronization Job"
+msgstr ""
+
+#: lib/lus_admin.functions.php:22
+msgid "Logs"
+msgstr ""
+
+#: lib/lus_admin.functions.php:25
+msgid "Ldap Syncronization Options"
+msgstr ""
+
+#: lib/lus_admin.functions.php:90
+msgid "<b>Synchronization Process:</b> Started Successfully!"
+msgstr ""
+
+#: lib/lus_admin.functions.php:96
+msgid "<b>LDAP Connection Test:</b> Successful!"
+msgstr ""
+
+#: lib/lus_admin.functions.php:99
+msgid "<b>LDAP Connection Test:</b> Failed!"
+msgstr ""
+
+#: lib/lus_admin.functions.php:103
+msgid "Saved Options!"
+msgstr ""
+
+#: lib/lus_admin.functions.php:121
+msgid "Log(s) deleted!"
+msgstr ""
+
+#: lib/lus_admin.functions.php:130
+msgid "<b>Log deletion:</b> Failed!"
+msgstr ""
+
+#: lib/lus_admin.functions.php:182
+msgid "LDAP Sync Options"
+msgstr ""
+
+#: lib/lus_view.functions.php:15
+msgid "Server Address:"
+msgstr ""
+
+#: lib/lus_view.functions.php:19
+msgid ""
+"The name or IP address of the LDAP server.  The protocol should be left out. "
+"(Ex. ldap.example.com). If you have more than one server, use commas. (Ex. "
+"ldap1.example.com, ldap2.example.com)"
+msgstr ""
+
+#: lib/lus_view.functions.php:23
+msgid "Server Port:"
+msgstr ""
+
+#: lib/lus_view.functions.php:27
+msgid ""
+"Port Number of the LDAP server. (LDAP: Linux=389, Windows=3268) (LDAPS: "
+"Linux=636, Windows=3269). Use commas for more than one server. Same as above."
+msgstr ""
+
+#: lib/lus_view.functions.php:31
+msgid "Search DN:"
+msgstr ""
+
+#: lib/lus_view.functions.php:35
+msgid ""
+"The base DN in which to carry out LDAP searches. (Ex. DC=example,DC=com)"
+msgstr ""
+
+#: lib/lus_view.functions.php:40
+msgid "Account Sufix:"
+msgstr ""
+
+#: lib/lus_view.functions.php:44
+msgid "The user account sufix. (Ex. @example.com)"
+msgstr ""
+
+#: lib/lus_view.functions.php:49
+msgid "Search User DN:"
+msgstr ""
+
+#: lib/lus_view.functions.php:53
+msgid ""
+"Some systems do not allow anonymous searching for attributes, and so this "
+"will set the account to use when connecting for searches."
+msgstr ""
+
+#: lib/lus_view.functions.php:57
+msgid "Search User Password:"
+msgstr ""
+
+#: lib/lus_view.functions.php:61
+msgid "Password for the User DN above."
+msgstr ""
+
+#: lib/lus_view.functions.php:65
+msgid "Test Connection:"
+msgstr ""
+
+#: lib/lus_view.functions.php:67 lib/lus_view.functions.php:153
+#: lib/lus_view.functions.php:171 lib/classes/lus_log_list_table.php:111
+msgid "Yes"
+msgstr ""
+
+#: lib/lus_view.functions.php:68 lib/lus_view.functions.php:154
+#: lib/lus_view.functions.php:172 lib/classes/lus_log_list_table.php:113
+msgid "No"
+msgstr ""
+
+#: lib/lus_view.functions.php:70
+msgid ""
+"Specifys whether or not to test the ldap server connection on form submit."
+msgstr ""
+
+#: lib/lus_view.functions.php:74 lib/lus_view.functions.php:105
+#: lib/lus_view.functions.php:178
+msgid "Save Options"
+msgstr ""
+
+#: lib/lus_view.functions.php:88
+msgid "Attributes:"
+msgstr ""
+
+#: lib/lus_view.functions.php:92
+msgid ""
+"Inform all LDAP attributes you wish to syncronize within the network users "
+"profiles. Separate the user profile field from the LDAP attribute using an "
+"equal sign, one pair per line. (Ex. Phone=telephoneNumber)"
+msgstr ""
+
+#: lib/lus_view.functions.php:96
+msgid "Capitalize Names:"
+msgstr ""
+
+#: lib/lus_view.functions.php:101
+msgid ""
+"Names should be capitalized when imported? (Ex. \"JOHN DOE\" or \"john doe\" "
+"will be replaced by \"John Doe\")"
+msgstr ""
+
+#: lib/lus_view.functions.php:120
+msgid "Job schedule:"
+msgstr ""
+
+#: lib/lus_view.functions.php:133
+msgid ""
+"The synchronization schedule. Use the built in calendar to choose the date "
+"and time."
+msgstr ""
+
+#: lib/lus_view.functions.php:137
+msgid "Next Run on:"
+msgstr ""
+
+#: lib/lus_view.functions.php:145
+msgid "No jobs scheduled."
+msgstr ""
+
+#: lib/lus_view.functions.php:151
+msgid "Perform a full Sync:"
+msgstr ""
+
+#: lib/lus_view.functions.php:156
+msgid ""
+"Specifys whether or not to perform a full syncronization on next run. The "
+"default behavior, the job will perform a full sync only on the very first "
+"time. On next run only LDAP users that have some info changed will be "
+"updated."
+msgstr ""
+
+#: lib/lus_view.functions.php:160
+msgid "Disable Sync:"
+msgstr ""
+
+#: lib/lus_view.functions.php:165
+msgid "Check if you want to disable the syncronization process."
+msgstr ""
+
+#: lib/lus_view.functions.php:169
+msgid "Run Now:"
+msgstr ""
+
+#: lib/lus_view.functions.php:174
+msgid ""
+"Specifys whether or not to run the syncronization process on form submit."
+msgstr ""
+
+#: lib/classes/lus_log_list_table.php:42
+msgid "Date"
+msgstr ""
+
+#: lib/classes/lus_log_list_table.php:43
+msgid "Status"
+msgstr ""
+
+#: lib/classes/lus_log_list_table.php:44
+msgid "Time Taken"
+msgstr ""
+
+#: lib/classes/lus_log_list_table.php:45
+msgid "Updated"
+msgstr ""
+
+#: lib/classes/lus_log_list_table.php:46
+msgid "Inactivated"
+msgstr ""
+
+#: lib/classes/lus_log_list_table.php:47
+msgid "Full Sync"
+msgstr ""
+
+#: lib/classes/lus_log_list_table.php:58
+msgid "No one"
+msgstr ""
+
+#: lib/classes/lus_log_list_table.php:68
+msgid "More"
+msgstr ""
+
+#: lib/classes/lus_log_list_table.php:105
+msgid "View"
+msgstr ""
+
+#: lib/classes/lus_log_list_table.php:118
+msgid "seconds"
+msgstr ""
+
+#: lib/classes/lus_log_list_table.php:124
+#: lib/classes/lus_log_list_table.php:157
+msgid "Delete"
+msgstr ""
+
+#: lib/classes/lus_log_list_table.php:146
+msgid "No logs."
+msgstr ""
+
+#: lib/classes/lus_log_list_table.php:303
+msgid "No data available."
+msgstr ""
