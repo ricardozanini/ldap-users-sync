@@ -1,34 +1,32 @@
 <?php
-
 /*
-  Plugin Name: LDAP Users Sync
-  Plugin URI: http://github.com/ricardozanini/ldap-users-sync
-  Description: A simple plugin to synchronize users from a given MS Active Directory into Wordpress Database. Currently only supported on MultiSite installations.
-  Version: 1.1.0
-  Author: Ricardo Zanini
-  Author URI: http://github.com/ricardozanini/
-  License: GPLv2 or later
-  Network: true
-  GitHub Plugin URI: https://github.com/ricardozanini/ldap-users-sync
-  GitHub Branch:     master
+Plugin Name: LDAP Users Sync
+Plugin URI: http://github.com/ricardozanini/ldap-users-sync
+Description: A simple plugin to synchronize users from a given MS Active Directory into Wordpress Database. Currently only supported on MultiSite installations.
+Version: 1.1.2
+Author: Ricardo Zanini
+Author URI: http://github.com/ricardozanini/
+License: GPLv2 or later
+Network: true
+GitHub Plugin URI: https://github.com/ricardozanini/ldap-users-sync
+GitHub Branch:     master
 
-  License:
+License:
 
-  Copyright 2012 RICARDO ZANINI (ricardozanini@gmail.com)
+Copyright 2012 RICARDO ZANINI (ricardozanini@gmail.com)
 
-  This program is free software; you can redistribute it and/or modify
-  it under the terms of the GNU General Public License, version 2, as
-  published by the Free Software Foundation.
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License, version 2, as
+published by the Free Software Foundation.
 
-  This program is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  GNU General Public License for more details.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
-  You should have received a copy of the GNU General Public License
-  along with this program; if not, write to the Free Software
-  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
 // If this file is called directly, abort.
