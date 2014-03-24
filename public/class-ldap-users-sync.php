@@ -61,7 +61,8 @@ class LDAP_Users_Sync {
     }
 
     public static function activate() {
-        $this->setup_database();
+        $me = LDAP_Users_Sync::get_instance();
+        $me->setup_database();
     }
 
     public static function deactivate() {
