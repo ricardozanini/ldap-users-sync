@@ -14,19 +14,19 @@ This plugin **WILL NOT** perform any kind of user authentication. For this, you 
 
 If you need users data from your LDAP directory to be on your Wordpress database, this plugin is just for you. 
 
-Once the users' profile data being on your database, other plugin or theme could use them to display more information about users or you could perform a query on `wp_usermeta` table to address any needs. You tell.
+Once the users's profile data being on your database, other plugin or theme could use it to display more information about them or you could perform a query on `wp_usermeta` table to address any needs. Your choice.
 
-At a given schedule this plugin will perform a search on your LDAP directory querying every user from a given base DN. Every returned user will have his/her email, first and last name plus any attribute you specified on plugin options being updated.
+At a given schedule this plugin will perform a search on your LDAP directory querying every user from a given `base DN` and update the WP database. Every returned user will have his/her email, first and last name and any other attribute you may specify on plugin options.
 
-After the first run, the next synchronization process will update only the new users or any users who have his/her data changed since the last run.
+After the first run, the next synchronization process will only update the new users or any users who have his/her data changed since the last run.
 
 **IMPORTANT!**
 
 Every user who doesn't has an account will be a **subscriber** in your main site with a **random** password. The plugin assume that you use any kind of LDAP authentication (we plan this for future releases).
 
-Users who doesn't have a valid email (`mail` attribute) will not be add.
+Users who doesn't have a valid email (`mail` attribute) will not be added.
 
-That's it. Enjoy. :)
+That's it for now. Enjoy. :)
 
 ## Requirements
  * PHP 5 and the LDAP (http://php.net/ldap) library
@@ -82,7 +82,7 @@ Please log issues on the GitHub at https://github.com/ricardozanini/ldap-users-s
 
 ## ChangeLog
 
-See [ChangeLog.md](ChangeLog.md).
+See [CHANGES.md](CHANGES.md).
 
 ## Credits
 
