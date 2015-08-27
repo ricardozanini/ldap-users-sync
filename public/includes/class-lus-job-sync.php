@@ -270,7 +270,7 @@ class Lus_Job_Sync {
                     'display_name' => $this->format_user_display_name($this->get_ldap_attr($user_ldap, 'givenname')),
                     'nickname' => $this->format_user_display_name($this->get_ldap_attr($user_ldap, 'givenname')),
                     'first_name' => $this->format_user_display_name($this->get_ldap_attr($user_ldap, 'givenname')),
-                    'last_name' => $this->format_user_display_name($this->get_ldap_attr($user_ldap, 'sn'))
+                    'last_name' => $this->format_user_display_name($this->get_ldap_attr($user_ldap, 'sn')),
                 );
 
                 lus_write_log('User "' . $user_name . '" DOES EXIST at WP database. Updating.');
@@ -293,6 +293,7 @@ class Lus_Job_Sync {
 
             update_user_meta($user_id, 'lus_active', true);
             update_user_meta($user_id, 'lus_user', true);
+            update_user_meta($user_id, 'ldap_login', 'true'); // WPMU Ldap Authentication
             $this->adldap->close();
         } catch (Exception $exc) {
             $err_msg = '[ERROR] Could not connect to LDAP: ' . $exc->getTraceAsString();

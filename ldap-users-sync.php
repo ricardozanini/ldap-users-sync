@@ -3,7 +3,7 @@
 Plugin Name: LDAP Users Sync
 Plugin URI: http://github.com/ricardozanini/ldap-users-sync
 Description: A simple plugin to synchronize users from a given MS Active Directory into Wordpress Database. Currently only supported on MultiSite installations.
-Version: 1.1.3
+Version: 1.1.4
 Author: Ricardo Zanini
 Author URI: http://github.com/ricardozanini/
 License: GPLv2 or later

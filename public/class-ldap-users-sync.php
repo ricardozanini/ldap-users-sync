@@ -11,7 +11,7 @@ require_once(dirname(__FILE__) . '/includes/class-lus-job-sync.php');
  */
 class LDAP_Users_Sync {
 
-    const VERSION = '1.1.0';
+    const VERSION = '1.1.4';
 
     protected $plugin_slug = 'ldap-users-sync';
     protected static $instance = null;
