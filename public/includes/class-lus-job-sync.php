@@ -28,9 +28,14 @@ class Lus_Job_Sync {
     protected $adldap = null;
 
     private function __construct() {
-        if (function_exists('get_option')) {
+        $default_timezone = date_default_timezone_get();
+        if (empty($default_timezone) && function_exists('get_option')) {
             //WP context
-            date_default_timezone_set(get_option('timezone_string'));
+            $timezone_string = get_option('timezone_string');
+            if(empty($timezone_string)) {
+                $timezone_string = 'UTC' . get_option('gmt_offset');
+            }
+            date_default_timezone_set($timezone_string);
         }
         $this->default_ldap_params = array('name', 'givenName', 'sn', 'samaccountname', 'mail');
         $this->last_error = array();
@@ -68,9 +73,14 @@ class Lus_Job_Sync {
         }
 
         if (FALSE !== $users) {
+            lus_write_log('Retrieved ' . count($users)  . ' users');
+            lus_write_log($users);
+            
             foreach ($users as $user) {
                 $this->update_active_wp_user($user);
             }
+        } else {
+            lus_write_log('None user retrieved: ' . $users);
         }
 
         if (!get_site_option('lusPerformedFullSync')) {
@@ -253,7 +263,7 @@ class Lus_Job_Sync {
                     'last_name' => $this->format_user_display_name($this->get_ldap_attr($user_ldap, 'sn')),
                     'user_registered' => date("Y-m-d H:i:s")
                 );
-
+                lus_write_log($userdata);
                 $user_id = wp_insert_user($userdata);
 
                 if (is_wp_error($user_id)) {
@@ -270,10 +280,11 @@ class Lus_Job_Sync {
                     'display_name' => $this->format_user_display_name($this->get_ldap_attr($user_ldap, 'givenname')),
                     'nickname' => $this->format_user_display_name($this->get_ldap_attr($user_ldap, 'givenname')),
                     'first_name' => $this->format_user_display_name($this->get_ldap_attr($user_ldap, 'givenname')),
-                    'last_name' => $this->format_user_display_name($this->get_ldap_attr($user_ldap, 'sn')),
+                    'last_name' => $this->format_user_display_name($this->get_ldap_attr($user_ldap, 'sn'))
                 );
 
                 lus_write_log('User "' . $user_name . '" DOES EXIST at WP database. Updating.');
+                lus_write_log($userdata);
                 $user_id = wp_update_user($userdata);
 
                 if (is_wp_error($user_id)) {
@@ -281,6 +292,8 @@ class Lus_Job_Sync {
                     lus_write_log($user_id);
                     $this->last_error[Lus_Sync_Status::WARN_STATUS][] = 'Error while updating user ' . $user_name;
                     return;
+                } else {
+                    lus_write_log('Success updating user ' .$user_name);
                 }
             }
 
@@ -301,7 +314,7 @@ class Lus_Job_Sync {
             $this->last_error[Lus_Sync_Status::ERROR_STATUS][] = $err_msg;
             $this->adldap->close();
         }
-    }
+    } 
 
     //----------------------------------------------------------------
     //                      Util Functions

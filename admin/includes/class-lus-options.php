@@ -86,19 +86,19 @@ class Lus_Options {
                 }
             }
 
-            if ($_POST['lusSyncStartDateTime']) {
+            if (isset($_POST['lusSyncStartDateTime']) && $_POST['lusSyncStartDateTime']) {
                 $this->create_cron_job();
             }
 
             # Run Sync now
-            if ($_POST['lusRunNow']) {
+            if (isset($_POST['lusRunNow']) && $_POST['lusRunNow']) {
                 wp_schedule_single_event(time() - 1, LUS_SYNC_JOB_NAME);
                 spawn_cron();
                 echo "<div id='message' class='updated fade'><p>" . __('<b>Synchronization Process:</b> Started Successfully!', 'ldap-users-sync') . "</p></div>";
             }
 
             # Test Ldap Connection
-            if ($_POST['lusTestConnection']) {
+            if (isset($_POST['lusTestConnection']) && $_POST['lusTestConnection']) {
                 if ($this->test_connection()) {
                     echo "<div id='message' class='updated fade'><p>" . __('<b>LDAP Connection Test:</b> Successful!', 'ldap-users-sync') . "</p></div>";
                 } else {
