@@ -14,7 +14,12 @@ class LDAP_Users_Sync_Admin {
         $this->plugin_slug = $plugin->get_plugin_slug();
 
         //setup
-        add_action('network_admin_menu', array(&$this, 'add_plugin_admin_menu'));
+        if(is_multisite()) {
+            add_action('network_admin_menu', array(&$this, 'add_plugin_admin_menu'));
+        }
+        else {
+            add_action('admin_menu', array(&$this, 'add_plugin_admin_menu'));
+        }
         add_action('admin_enqueue_scripts', array(&$this, 'enqueue_admin_scripts'));
 
         //ajax
@@ -41,9 +46,13 @@ class LDAP_Users_Sync_Admin {
 
     public function add_plugin_admin_menu() {
         if (function_exists('add_submenu_page') && is_super_admin()) {
-            // does not use add_options_page, because it is site-wide configuration,
-            //  not blog-specific config, but side-wide
-            $this->plugin_screen_hook_suffix = add_submenu_page('settings.php', __('LDAP Sync Options', $this->plugin_slug), __('LDAP Sync Options', $this->plugin_slug), 'manage_network', $this->plugin_slug, array($this, 'display_plugin_admin_page'));
+            if(is_multisite()) {
+                // does not use add_options_page, because it is site-wide configuration
+                $this->plugin_screen_hook_suffix = add_submenu_page('settings.php', __('LDAP Sync Options', $this->plugin_slug), __('LDAP Sync Options', $this->plugin_slug), 'manage_network', $this->plugin_slug, array($this, 'display_plugin_admin_page'));
+            }
+            else {
+                $this->plugin_screen_hook_suffix = add_options_page(__('LDAP Sync Options', $this->plugin_slug), __('LDAP Sync Options', $this->plugin_slug), 'manage_options', $this->plugin_slug, array($this, 'display_plugin_admin_page'));
+            }
         }
     }
 
